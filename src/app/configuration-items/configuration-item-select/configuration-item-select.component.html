@@ -1,3 +1,7 @@
-<p>
-  configuration-item-select works!
-</p>
+<div class="form-group">
+  <label for="multiSelectInput">{{ data.label }}</label>
+  <select [multiple]="data.value.multi" class="form-control" id="multiSelectInput" aria-describedby="describeLabel">
+    <option *ngFor="let item of data.value.data" [ngValue]="item">{{ item.displayValue }}</option>
+  </select>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

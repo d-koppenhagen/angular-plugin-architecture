@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { PluginSettings } from '../../services/plugins-config.provider';
+import { PluginSettings, PluginRadioConfig } from '../../services/plugins-config.provider';
 
 @Component({
   selector: 'app-configuration-item-radio',
@@ -13,6 +13,10 @@ export class ConfigurationItemRadioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelectionChange(item: any[]) {
+    console.log('selected:', item);
   }
 
 }

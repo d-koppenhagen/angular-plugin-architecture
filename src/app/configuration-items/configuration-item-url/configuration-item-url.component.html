@@ -1,3 +1,5 @@
-<p>
-  configuration-item-url works!
-</p>
+<div class="form-group">
+  <label for="inputField">{{ data.label }}</label>
+  <input type="email" class="form-control" id="inputField" aria-describedby="describeLabel" [placeholder]="data.label">
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

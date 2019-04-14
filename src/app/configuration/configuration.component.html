@@ -8,20 +8,20 @@
     <div class="container">
       <div class="row" *ngFor="let cfgItem of plugin.value.settings">
         <ng-container [ngSwitch]="cfgItem.type">
-          <app-configuration-item-input *ngSwitchCase="'input'">...</app-configuration-item-input>
-          <app-configuration-item-select *ngSwitchCase="'select'">...</app-configuration-item-select>
-          <app-configuration-item-radio *ngSwitchCase="'radio'">...</app-configuration-item-radio>
-          <app-configuration-item-checkbox *ngSwitchCase="'checkbox'">...</app-configuration-item-checkbox>
-          <app-configuration-item-switch *ngSwitchCase="'switch'">...</app-configuration-item-switch>
-          <app-configuration-item-slider *ngSwitchCase="'slider'">...</app-configuration-item-slider>
-          <app-configuration-item-messagebox *ngSwitchCase="'messagebox'">...</app-configuration-item-messagebox>
-          <app-configuration-item-datepicker *ngSwitchCase="'datepicker'">...</app-configuration-item-datepicker>
-          <app-configuration-item-datetimepicker *ngSwitchCase="'datetimepicker'">...</app-configuration-item-datetimepicker>
-          <app-configuration-item-daterangepicker *ngSwitchCase="'daterangepicker'">...</app-configuration-item-daterangepicker>
-          <app-configuration-item-daterangetimepicker *ngSwitchCase="'daterangetimepicker'">...</app-configuration-item-daterangetimepicker>
-          <app-configuration-item-timepicker *ngSwitchCase="'timepicker'">...</app-configuration-item-timepicker>
-          <app-configuration-item-timerangepicker *ngSwitchCase="'timerangepicker'">...</app-configuration-item-timerangepicker>
-          <app-configuration-item-url *ngSwitchCase="'url'">...</app-configuration-item-url>
+          <app-configuration-item-input *ngSwitchCase="'input'" [data]="cfgItem"></app-configuration-item-input>
+          <app-configuration-item-select *ngSwitchCase="'select'" [data]="cfgItem"></app-configuration-item-select>
+          <app-configuration-item-radio *ngSwitchCase="'radio'" [data]="cfgItem"></app-configuration-item-radio>
+          <app-configuration-item-checkbox *ngSwitchCase="'checkbox'" [data]="cfgItem"></app-configuration-item-checkbox>
+          <app-configuration-item-switch *ngSwitchCase="'switch'" [data]="cfgItem"></app-configuration-item-switch>
+          <app-configuration-item-slider *ngSwitchCase="'slider'" [data]="cfgItem"></app-configuration-item-slider>
+          <app-configuration-item-messagebox *ngSwitchCase="'messagebox'" [data]="cfgItem"></app-configuration-item-messagebox>
+          <app-configuration-item-datepicker *ngSwitchCase="'datepicker'" [data]="cfgItem"></app-configuration-item-datepicker>
+          <app-configuration-item-datetimepicker *ngSwitchCase="'datetimepicker'" [data]="cfgItem"></app-configuration-item-datetimepicker>
+          <app-configuration-item-daterangepicker *ngSwitchCase="'daterangepicker'" [data]="cfgItem"></app-configuration-item-daterangepicker>
+          <app-configuration-item-daterangetimepicker *ngSwitchCase="'daterangetimepicker'" [data]="cfgItem"></app-configuration-item-daterangetimepicker>
+          <app-configuration-item-timepicker *ngSwitchCase="'timepicker'" [data]="cfgItem"></app-configuration-item-timepicker>
+          <app-configuration-item-timerangepicker *ngSwitchCase="'timerangepicker'" [data]="cfgItem"></app-configuration-item-timerangepicker>
+          <app-configuration-item-url *ngSwitchCase="'url'" [data]="cfgItem"></app-configuration-item-url>
           <div class="alert alert-warning" role="alert" *ngSwitchDefault>
             The configuration item doen't match any appropriate component {{ cfgItem | json }}
           </div>

@@ -15,37 +15,105 @@
         "label": "Select",
         "description": "A select box for choosing an option",
         "type": "select",
-        "value": [
-          { "dataValue": 1, "displayValue": "Option 1"},
-          { "dataValue": 2, "displayValue": "Option 1"},
-          { "dataValue": 3, "displayValue": "Option 1"}
-        ]
+        "value": {
+          "multi": false,
+          "data": [
+            { "dataValue": 1, "displayValue": "Option 1"},
+            { "dataValue": 2, "displayValue": "Option 2"},
+            { "dataValue": 3, "displayValue": "Option 3"}
+          ]
+        }
+      },
+      {
+        "label": "Select multi",
+        "description": "A select box for choosing an option",
+        "type": "select",
+        "value": {
+          "multi": true,
+          "data": [
+            { "dataValue": 1, "displayValue": "Option 1"},
+            { "dataValue": 2, "displayValue": "Option 2"},
+            { "dataValue": 3, "displayValue": "Option 3"}
+          ]
+        }
       },
       {
         "label": "Radio Button",
         "description": "A radio bitton group for choosing an option",
         "type": "radio",
-        "value": [
-          { "dataValue": 1, "displayValue": "Option 1"},
-          { "dataValue": 2, "displayValue": "Option 1"},
-          { "dataValue": 3, "displayValue": "Option 1"}
-        ]
+        "value": {
+          "inline": false,
+          "data": [
+            { "dataValue": 1, "displayValue": "Option 1"},
+            { "dataValue": 2, "displayValue": "Option 2"},
+            { "dataValue": 3, "displayValue": "Option 3"}
+          ]
+        }
+      },
+      {
+        "label": "Radio Button inline",
+        "description": "A radio bitton group for choosing an option (inline)",
+        "type": "radio",
+        "value": {
+          "inline": true,
+          "data": [
+            { "dataValue": 1, "displayValue": "Option 1"},
+            { "dataValue": 2, "displayValue": "Option 2"},
+            { "dataValue": 3, "displayValue": "Option 3"}
+          ]
+        }
       },
       {
         "label": "Checkbox",
         "description": "A group of checkboxes for choosing multiple options",
         "type": "checkbox",
-        "value": [
-          { "dataValue": 1, "displayValue": "Option 1"},
-          { "dataValue": 2, "displayValue": "Option 1"},
-          { "dataValue": 3, "displayValue": "Option 1"}
-        ]
+        "value": {
+          "inline": false,
+          "data": [
+            { "dataValue": false, "displayValue": "Option 1"},
+            { "dataValue": true, "displayValue": "Option 2"},
+            { "dataValue": true, "displayValue": "Option 3"}
+          ]
+        }
       },
       {
-        "label": "Switch",
-        "description": "A toggle on / off switch",
+        "label": "Checkbox inline",
+        "description": "A group of checkboxes for choosing multiple options (inline)",
+        "type": "checkbox",
+        "value": {
+          "inline": true,
+          "data": [
+            { "dataValue": true, "displayValue": "Option 1"},
+            { "dataValue": false, "displayValue": "Option 2"},
+            { "dataValue": false, "displayValue": "Option 3"}
+          ]
+        }
+      },
+      {
+        "label": "Switches",
+        "description": "Toggle on / off switches",
         "type": "switch",
-        "value": true
+        "value": {
+          "inline": false,
+          "data": [
+            { "dataValue": true, "displayValue": "Option 1"},
+            { "dataValue": false, "displayValue": "Option 2"},
+            { "dataValue": true, "displayValue": "Option 3"}
+          ]
+        }
+      },
+      {
+        "label": "Switches inline",
+        "description": "Toggle on / off switches (inline)",
+        "type": "switch",
+        "value": {
+          "inline": true,
+          "data": [
+            { "dataValue": false, "displayValue": "Option 1"},
+            { "dataValue": false, "displayValue": "Option 2"},
+            { "dataValue": true, "displayValue": "Option 3"}
+          ]
+        }
       },
       {
         "label": "Slider",

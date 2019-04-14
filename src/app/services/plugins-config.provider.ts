@@ -42,25 +42,43 @@ export type PluginValueType
   | string
   | Date
   | boolean
-  | PluginSelectValues[]
-  | PluginRadioValues[]
-  | PluginCheckboxValues[]
+  | PluginSelectConfig
+  | PluginRadioConfig
+  | PluginCheckboxValues
+  | PluginSwitchesValues
   | PluginSliderConfig
   | RangePickerConfig;
 
-export interface PluginSelectValues {
-  dataValue: any;
-  displayValue?: string;
+export interface PluginSelectConfig {
+  multi: boolean;
+  data: {
+    dataValue: any;
+    displayValue?: string;
+  };
 }
 
-export interface PluginRadioValues {
-  dataValue: any;
-  displayValue?: string;
+export interface PluginRadioConfig {
+  inline: boolean;
+  data: [{
+    dataValue: any;
+    displayValue?: string;
+  }];
 }
 
 export interface PluginCheckboxValues {
-  dataValue: any;
-  displayValue?: string;
+  inline: boolean;
+  data: [{
+    dataValue: boolean;
+    displayValue?: string;
+  }];
+}
+
+export interface PluginSwitchesValues {
+  inline: boolean;
+  data: [{
+    dataValue: boolean;
+    displayValue?: string;
+  }];
 }
 
 export interface PluginSliderConfig {

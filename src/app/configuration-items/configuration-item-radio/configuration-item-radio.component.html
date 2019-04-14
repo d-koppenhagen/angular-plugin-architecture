@@ -1,3 +1,13 @@
-<p>
-  configuration-item-radio works!
-</p>
+<div class="form-group">
+  <label for="radioGroup">{{ data.label }}</label>
+  <div class="form-check" id="radioGroup" [ngClass]="{'form-check-inline': data.value.inline}" aria-describedby="describeLabel" *ngFor="let item of data.value.data; let i = index">
+    <input class="form-check-input" type="radio" name="radio-{{i}}" id="radio-{{i}}"
+      [value]="item"
+      [checked]="i === 0"
+      (change)="onSelectionChange(item)">
+    <label class="form-check-label" for="radio-{{i}}">
+      {{ item.displayValue }}
+    </label>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

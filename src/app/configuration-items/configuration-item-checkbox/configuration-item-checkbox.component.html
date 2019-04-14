@@ -1,3 +1,12 @@
-<p>
-  configuration-item-checkbox works!
-</p>
+<div class="form-group">
+  <label for="checkboxGroup">{{ data.label }}</label>
+  <div class="form-check" id="checkboxGroup" [ngClass]="{'form-check-inline': data.value.inline}" aria-describedby="describeLabel" *ngFor="let item of data.value.data; let i = index">
+    <input class="form-check-input" type="checkbox" name="checkbox-{{i}}" id="checkbox-{{i}}"
+      [value]="item"
+      [checked]="item.dataValue">
+    <label class="form-check-label" for="radio-{{i}}">
+      {{ item.displayValue }}
+    </label>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

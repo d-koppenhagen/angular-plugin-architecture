@@ -1,3 +1,11 @@
-<p>
-  configuration-item-switch works!
-</p>
+<div class="form-group">
+  <label for="switchField">{{ data.label }}</label>
+  <div class="custom-control custom-switch" aria-describedby="describeLabel"
+    *ngFor="let item of data.value.data; let i = index">
+    <input type="checkbox" class="custom-control-input" id="switchField-{{i}}"
+      [value]="item.dataValue"
+      [checked]="item.dataValue">
+    <label class="custom-control-label" for="switchField">{{ item.displayValue }}</label>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>
