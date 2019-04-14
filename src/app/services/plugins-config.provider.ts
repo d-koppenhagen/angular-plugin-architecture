@@ -4,12 +4,75 @@ import { tap } from 'rxjs/operators';
 import { preserveServerState } from './transfer-state.service';
 import { isPlatformBrowser } from '@angular/common';
 
-interface PluginsConfig {
+export interface PluginsConfig {
   [key: string]: {
     name: string;
+    description?: string;
     path: string;
     deps: string[];
+    settings?: PluginSettings[];
   };
+}
+
+export interface PluginSettings {
+  label: string;
+  description?: string;
+  type: PluginSettingType;
+  value?: PluginValueType;
+}
+
+export type PluginSettingType
+  = 'input'
+  | 'select'
+  | 'radio'
+  | 'checkbox'
+  | 'switch'
+  | 'slider'
+  | 'messagebox'
+  | 'datepicker'
+  | 'datetimepicker'
+  | 'daterangepicker'
+  | 'daterangetimepicker'
+  | 'timepicker'
+  | 'timerangepicker'
+  | 'url';
+
+export type PluginValueType
+  = number
+  | string
+  | Date
+  | boolean
+  | PluginSelectValues[]
+  | PluginRadioValues[]
+  | PluginCheckboxValues[]
+  | PluginSliderConfig
+  | RangePickerConfig;
+
+export interface PluginSelectValues {
+  dataValue: any;
+  displayValue?: string;
+}
+
+export interface PluginRadioValues {
+  dataValue: any;
+  displayValue?: string;
+}
+
+export interface PluginCheckboxValues {
+  dataValue: any;
+  displayValue?: string;
+}
+
+export interface PluginSliderConfig {
+  min: number;
+  max: number;
+  default: number;
+  steps: number;
+}
+
+export interface RangePickerConfig {
+  start: Date;
+  end: Date;
 }
 
 @Injectable()

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row" *ngFor="let cfg of config$ | async | keyvalue">
+    <h3>
+      {{ cfg.value.name }}
+      <small class="text-muted" *ngIf="cfg.value.description">{{ cfg.value.description }}</small>
+    </h3>
+    {{ cfg | json }}
+  </div>
+</div>

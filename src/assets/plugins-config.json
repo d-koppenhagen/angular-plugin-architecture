@@ -1,8 +1,121 @@
 {
   "plugin1": {
-    "name": "Plugin 2",
+    "name": "Example Plugin",
     "path": "/assets/plugins/plugin1.js",
-    "deps": ["shared"]
+    "description": "This is an example plugin which contains the basic configuration options",
+    "deps": ["shared"],
+    "settings": [
+      {
+        "label": "Input",
+        "description": "A simple input field",
+        "type": "input",
+        "value": "Default Input"
+      },
+      {
+        "label": "Select",
+        "description": "A select box for choosing an option",
+        "type": "select",
+        "value": [
+          { "dataValue": 1, "displayValue": "Option 1"},
+          { "dataValue": 2, "displayValue": "Option 1"},
+          { "dataValue": 3, "displayValue": "Option 1"}
+        ]
+      },
+      {
+        "label": "Radio Button",
+        "description": "A radio bitton group for choosing an option",
+        "type": "radio",
+        "value": [
+          { "dataValue": 1, "displayValue": "Option 1"},
+          { "dataValue": 2, "displayValue": "Option 1"},
+          { "dataValue": 3, "displayValue": "Option 1"}
+        ]
+      },
+      {
+        "label": "Checkbox",
+        "description": "A group of checkboxes for choosing multiple options",
+        "type": "checkbox",
+        "value": [
+          { "dataValue": 1, "displayValue": "Option 1"},
+          { "dataValue": 2, "displayValue": "Option 1"},
+          { "dataValue": 3, "displayValue": "Option 1"}
+        ]
+      },
+      {
+        "label": "Switch",
+        "description": "A toggle on / off switch",
+        "type": "switch",
+        "value": true
+      },
+      {
+        "label": "Slider",
+        "description": "A slider for choosing a numeric value",
+        "type": "slider",
+        "value": {
+          "min": 0,
+          "max": 100,
+          "default": 50,
+          "steps": 0.5
+        }
+      },
+      {
+        "label": "Message Box",
+        "description": "A message box",
+        "type": "messagebox",
+        "value": "Default Message Text"
+      },
+      {
+        "label": "Datepicker",
+        "description": "A Datepicker without time configuration",
+        "type": "datepicker",
+        "value": null
+      },
+      {
+        "label": "Date-Time-Picker",
+        "description": "A Datepicker with time configuration",
+        "type": "datetimepicker",
+        "value": null
+      },
+      {
+        "label": "Date-Range-Picker",
+        "description": "A Date-Range-Picker without time configuration",
+        "type": "daterangepicker",
+        "value": {
+          "start": null,
+          "end": null
+        }
+      },
+      {
+        "label": "Date-Range-Time-Picker",
+        "description": "A Date-Range-Picker with time configuration",
+        "type": "daterangetimepicker",
+        "value": {
+          "start": null,
+          "end": null
+        }
+      },
+      {
+        "label": "Timepicker",
+        "description": "A Timepicker",
+        "type": "timepicker",
+        "value": null
+      },
+      {
+        "label": "Time-Range-Picker",
+        "description": "A Time-Range-Picker",
+        "type": "timerangepicker",
+        "value": {
+          "start": null,
+          "end": null
+        }
+      },
+      {
+        "label": "URL",
+        "description": "A URL input field",
+        "type": "url",
+        "value": "http://example.org"
+      }
+    ]
   },
   "plugin2": {
     "name": "Plugin 2",
