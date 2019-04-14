@@ -114,6 +114,12 @@
         "description": "A URL input field",
         "type": "url",
         "value": "http://example.org"
+      },
+      {
+        "label": "Invalid",
+        "description": "This type should be detected as invalid",
+        "type": "aaa",
+        "value": ""
       }
     ]
   },

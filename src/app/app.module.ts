@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
+import { CONFIGURATION_ITEM_COMPONENTS } from './configuration-items';
 import { PluginLoaderService } from './services/plugin-loader/plugin-loader.service';
 import { ClientPluginLoaderService } from './services/plugin-loader/client-plugin-loader.service';
 import { PluginsConfigProvider } from './services/plugins-config.provider';
@@ -15,7 +16,8 @@ import { TransferStateService } from './services/transfer-state.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    ...CONFIGURATION_ITEM_COMPONENTS
   ],
   imports: [
     HttpClientModule,

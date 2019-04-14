@@ -1,9 +1,32 @@
 <div class="container">
-  <div class="row" *ngFor="let cfg of config$ | async | keyvalue">
+  <div class="row" *ngFor="let plugin of config$ | async | keyvalue">
     <h3>
-      {{ cfg.value.name }}
-      <small class="text-muted" *ngIf="cfg.value.description">{{ cfg.value.description }}</small>
+      {{ plugin.value.name }}
+      <small class="text-muted" *ngIf="plugin.value.description">{{ plugin.value.description }}</small>
     </h3>
-    {{ cfg | json }}
+    
+    <div class="container">
+      <div class="row" *ngFor="let cfgItem of plugin.value.settings">
+        <ng-container [ngSwitch]="cfgItem.type">
+          <app-configuration-item-input *ngSwitchCase="'input'">...</app-configuration-item-input>
+          <app-configuration-item-select *ngSwitchCase="'select'">...</app-configuration-item-select>
+          <app-configuration-item-radio *ngSwitchCase="'radio'">...</app-configuration-item-radio>
+          <app-configuration-item-checkbox *ngSwitchCase="'checkbox'">...</app-configuration-item-checkbox>
+          <app-configuration-item-switch *ngSwitchCase="'switch'">...</app-configuration-item-switch>
+          <app-configuration-item-slider *ngSwitchCase="'slider'">...</app-configuration-item-slider>
+          <app-configuration-item-messagebox *ngSwitchCase="'messagebox'">...</app-configuration-item-messagebox>
+          <app-configuration-item-datepicker *ngSwitchCase="'datepicker'">...</app-configuration-item-datepicker>
+          <app-configuration-item-datetimepicker *ngSwitchCase="'datetimepicker'">...</app-configuration-item-datetimepicker>
+          <app-configuration-item-daterangepicker *ngSwitchCase="'daterangepicker'">...</app-configuration-item-daterangepicker>
+          <app-configuration-item-daterangetimepicker *ngSwitchCase="'daterangetimepicker'">...</app-configuration-item-daterangetimepicker>
+          <app-configuration-item-timepicker *ngSwitchCase="'timepicker'">...</app-configuration-item-timepicker>
+          <app-configuration-item-timerangepicker *ngSwitchCase="'timerangepicker'">...</app-configuration-item-timerangepicker>
+          <app-configuration-item-url *ngSwitchCase="'url'">...</app-configuration-item-url>
+          <div class="alert alert-warning" role="alert" *ngSwitchDefault>
+            The configuration item doen't match any appropriate component {{ cfgItem | json }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </div>
