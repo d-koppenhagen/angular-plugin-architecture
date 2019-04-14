@@ -1,3 +1,10 @@
-<p>
-  configuration-item-slider works!
-</p>
+<div class="form-group">
+  <label for="slider">{{ data.label }}</label>
+  <input class="form-control custom-range" type="range" id="slider" aria-describedby="describeLabel"
+  [min]="data.value.min"
+  [max]="data.value.max"
+  [step]="data.value.step"
+  [value]="data.value.value">
+  <label class="custom-range-label" for="switchField">{{ data.value.value }}</label>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

@@ -84,8 +84,8 @@ export interface PluginSwitchesValues {
 export interface PluginSliderConfig {
   min: number;
   max: number;
-  default: number;
-  steps: number;
+  value: number;
+  step: number;
 }
 
 export interface RangePickerConfig {
