@@ -1,0 +1,6 @@
+.timepicker-range {
+    display: block;
+}
+.timepicker-range-start, .timepicker-range-end {
+    display: inline-block;
+}

@@ -166,15 +166,26 @@
         "label": "Timepicker",
         "description": "A Timepicker",
         "type": "timepicker",
-        "value": null
+        "value": {
+          "hour": 13,
+          "minute": 30,
+          "second": 0
+        }
       },
       {
         "label": "Time-Range-Picker",
         "description": "A Time-Range-Picker",
         "type": "timerangepicker",
         "value": {
-          "start": null,
-          "end": null
+          "start": {
+            "hour": 15,
+            "minute": 23,
+            "second": 10
+          },
+          "end": {
+            "hour": 17,
+            "minute": 20
+          }
         }
       },
       {

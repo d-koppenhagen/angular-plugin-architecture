@@ -1,3 +1,14 @@
-<p>
-  configuration-item-timerangepicker works!
-</p>
+<div class="form-group">
+  <label for="timepicker-range">{{ data.label }}</label>
+  <div class="timepicker-range">
+    <label class="from-label" for="timerangepicker-start">Von</label>
+    <div class="timepicker-range-start">
+      <ngb-timepicker [(ngModel)]="data.value.start" id="timerangepicker-start" aria-describedby="describeLabel"></ngb-timepicker>
+    </div>
+    <label class="to-label" for="timerangepicker-end">Bis</label>
+    <div class="timepicker-range-end">
+      <ngb-timepicker [(ngModel)]="data.value.end" id="timerangepicker-end" aria-describedby="describeLabel"></ngb-timepicker>
+    </div>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

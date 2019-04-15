@@ -1,3 +1,11 @@
-<p>
-  configuration-item-datepicker works!
-</p>
+<div class="form-group">
+  <label for="datepicker">{{ data.label }}</label>
+  <div class="input-group">
+    <input class="form-control" placeholder="dd.mm.yyyy" id="datepicker"
+           name="dp" [(ngModel)]="data.value" ngbDatepicker #d="ngbDatepicker">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+    </div>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

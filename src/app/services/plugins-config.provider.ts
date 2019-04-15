@@ -47,7 +47,8 @@ export type PluginValueType
   | PluginCheckboxValues
   | PluginSwitchesValues
   | PluginSliderConfig
-  | RangePickerConfig;
+  | RangePickerConfig
+  | TimeConfig;
 
 export interface PluginSelectConfig {
   multi: boolean;
@@ -89,8 +90,14 @@ export interface PluginSliderConfig {
 }
 
 export interface RangePickerConfig {
-  start: Date;
-  end: Date;
+  start: Date | TimeConfig;
+  end: Date | TimeConfig;
+}
+
+export interface TimeConfig {
+  hour: number;
+  minute: number;
+  second?: number;
 }
 
 @Injectable()

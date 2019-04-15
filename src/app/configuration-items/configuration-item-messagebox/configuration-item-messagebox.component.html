@@ -1,3 +1,5 @@
-<p>
-  configuration-item-messagebox works!
-</p>
+<div class="form-group">
+  <label for="textField">{{ data.label }}</label>
+  <textarea class="form-control" id="textField" aria-describedby="describeLabel" [placeholder]="data.label"></textarea>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>

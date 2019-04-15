@@ -5,6 +5,7 @@ import {
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
@@ -13,7 +14,6 @@ import { PluginLoaderService } from './services/plugin-loader/plugin-loader.serv
 import { ClientPluginLoaderService } from './services/plugin-loader/client-plugin-loader.service';
 import { PluginsConfigProvider } from './services/plugins-config.provider';
 import { TransferStateService } from './services/transfer-state.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,8 @@ import { TransferStateService } from './services/transfer-state.service';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    NgbModule
   ],
   providers: [
     { provide: PluginLoaderService, useClass: ClientPluginLoaderService },

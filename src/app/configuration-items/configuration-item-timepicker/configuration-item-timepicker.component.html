@@ -1,3 +1,5 @@
-<p>
-  configuration-item-timepicker works!
-</p>
+<div class="form-group">
+  <label for="timepicker">{{ data.label }}</label>
+  <ngb-timepicker [(ngModel)]="data.value" id="timepicker" aria-describedby="describeLabel"></ngb-timepicker>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>
