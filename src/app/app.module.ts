@@ -14,6 +14,7 @@ import { PluginLoaderService } from './services/plugin-loader/plugin-loader.serv
 import { ClientPluginLoaderService } from './services/plugin-loader/client-plugin-loader.service';
 import { PluginsConfigProvider } from './services/plugins-config.provider';
 import { TransferStateService } from './services/transfer-state.service';
+import { AppRoutingModule } from './app.routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { TransferStateService } from './services/transfer-state.service';
     ReactiveFormsModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserTransferStateModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: PluginLoaderService, useClass: ClientPluginLoaderService },
