@@ -1,3 +1,18 @@
-<p>
-  configuration-item-daterangepicker works!
-</p>
+<div class="form-group">
+  <label for="datepickerRangePicker">{{ data.label }}</label>
+  <div class="input-group">
+    <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" outsideDays="hidden">
+    </ngb-datepicker>
+    <ng-template #t let-date let-focused="focused">
+      <span class="custom-day"
+        [class.focused]="focused"
+        [class.range]="isRange(date)"
+        [class.faded]="isHovered(date) || isInside(date)"
+        (mouseenter)="hoveredDate = date"
+        (mouseleave)="hoveredDate = null">
+        {{ date.day }}
+      </span>
+    </ng-template>
+  </div>
+  <small id="describeLabel" class="form-text text-muted">{{ data.description }}</small>
+</div>
